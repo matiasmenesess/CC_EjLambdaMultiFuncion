@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "180f8634-d86f-4082-a3f4-9a0e782becc0",
+		"name": "Lambda Alumnos API",
+		"description": "Colección de pruebas para la API de gestión de alumnos en AWS Lambda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34150216"
+	},
+	"item": [
+		{
+			"name": "Listar Alumnos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tenant_id\": \"UTEC\", \"action\": \"listar\"}"
+				},
+				"url": {
+					"raw": "https://33a8x130q5.execute-api.us-east-1.amazonaws.com/prod/alumnos/listar",
+					"protocol": "https",
+					"host": [
+						"33a8x130q5",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"alumnos",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Alumno",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tenant_id\": \"UTEC\", \"action\": \"crear\", \"alumno_id\": \"202099999\", \"alumno_datos\": {\"nombre\": \"Nuevo Alumno\", \"sexo\": \"M\", \"fecha_nac\": \"2000-09-01\", \"celular\": \"999123456\", \"domicilio\": {\"direcc\": \"Av. Nueva 123\", \"distrito\": \"Lima\", \"provincia\": \"Lima\", \"departamento\": \"Lima\", \"pais\": \"Per\\u00fa\"}}}"
+				},
+				"url": {
+					"raw": "https://33a8x130q5.execute-api.us-east-1.amazonaws.com/prod/alumnos/crear",
+					"protocol": "https",
+					"host": [
+						"33a8x130q5",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"alumnos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Alumno",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tenant_id\": \"UTEC\", \"action\": \"modificar\", \"alumno_id\": \"202099999\", \"alumno_datos\": {\"nombre\": \"Alumno Modificado\", \"sexo\": \"M\", \"fecha_nac\": \"2000-09-01\", \"celular\": \"999123456\", \"domicilio\": {\"direcc\": \"Av. Modificada 456\", \"distrito\": \"Lima\", \"provincia\": \"Lima\", \"departamento\": \"Lima\", \"pais\": \"Per\\u00fa\"}}}"
+				},
+				"url": {
+					"raw": "https://33a8x130q5.execute-api.us-east-1.amazonaws.com/prod/alumnos/modificar",
+					"protocol": "https",
+					"host": [
+						"33a8x130q5",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"alumnos",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Alumno",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tenant_id\": \"UTEC\", \"action\": \"buscar\", \"alumno_id\": \"202010290\"}"
+				},
+				"url": {
+					"raw": "https://33a8x130q5.execute-api.us-east-1.amazonaws.com/prod/alumnos/buscar",
+					"protocol": "https",
+					"host": [
+						"33a8x130q5",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"alumnos",
+						"buscar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Alumno",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tenant_id\": \"UTEC\", \"action\": \"eliminar\", \"alumno_id\": \"202099999\"}"
+				},
+				"url": {
+					"raw": "https://33a8x130q5.execute-api.us-east-1.amazonaws.com/prod/alumnos/eliminar",
+					"protocol": "https",
+					"host": [
+						"33a8x130q5",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"alumnos",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
